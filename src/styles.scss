@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "assets/forms.scss";
+
+$theme-colors: (
+  "primary": #eb3321,
+  "danger": #E64833,
+  "grey": #2a3136,
+  "light": #fff,
+  "dark": #191d20
+);
+
+$primary: #eb3321;
+$dark: #191d20;
+$grey: #2a3136;
+$light: #fff;
+$danger: #E64833;
+
+
+$body-bg: $dark;
+$body-color: $light;
+$bg-primary: $primary;
+html {
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none !important;
+  color: $light !important;
+}
+.btn-danger{
+    background-color: $danger;
+    border-color: $danger;
+    color: $light
+}
+.btn-primary{
+  background-color: $primary;
+  border-color: $primary;
+  color: $light
+}
+.btn{
+  color: $light!important;
+}
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,21 @@
+<div class="row auth">
+    <div class="auth-form col-5 mx-auto authform">
+        <app-alert *ngIf="error" [message]="error" (close)="closeDialog($event)"></app-alert>
+        <form class="text-light mt-3" *ngIf="!loading" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" required email ngModel name="email" id="email" class="form-control bg-light text-dark">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" required minlength="6" ngModel name="password" id="password" class="form-control bg-light text-dark">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary" [disabled]="authForm.invalid">{{ isLoginMode ? 'Login':'Register' }}</button>
+                <button type="button" class="btn btn-dark text-light ms-2" (click)="onToggleMode()"> {{ isLoginMode ? 'Create Account':'I already have an account'}}</button>
+            </div>
+        </form>
+        
+        <app-loading *ngIf="loading"></app-loading>
+    </div>
+</div>

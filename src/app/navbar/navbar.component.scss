@@ -1,0 +1,24 @@
+.drop-menu::after {
+    display: none !important;
+}
+
+#navbarNavDarkDropdown .dropdown-menu {
+    position: absolute; /* Positions the dropdown menu absolutely within the navbar */
+    top: 100%; /* Places the dropdown menu below the button */
+    right: 0; /* Aligns the dropdown menu to the right edge */
+    left: auto; /* Ensures left property does not interfere */
+    min-width: 100%; /* Ensures the dropdown menu takes the full width of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow for better visibility */
+    overflow: hidden; /* Prevents overflow */
+    z-index: 1000; /* Ensures the dropdown menu is on top of other elements */
+}
+
+#navbarNavDarkDropdown .dropdown-item {
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Ensures no overflow */
+    text-overflow: ellipsis; /* Adds ellipsis if text overflows */
+}
+
+.text-primary{
+    color: #eb3321!important;
+}

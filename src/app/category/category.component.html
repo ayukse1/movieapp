@@ -1,0 +1,15 @@
+
+    <a 
+        routerLink="/movies"
+        (click)="selectCategory()"
+        [class.active]="displayAll"
+        class="btn btn-dark d-flex d-md-block mx-2 text-md-start">Tüm Kategoriler
+    </a>
+
+    <a 
+        routerLink="/movies/category/{{ item.id }}"
+        *ngFor="let item of categories" 
+        (click)="selectCategory(item)"
+        [class.active]="!displayAll && selectedCategory.id == item.id"
+        class="btn btn-dark d-flex d-md-block mx-2 text-md-start">{{ item.name | titlecase }}
+    </a>

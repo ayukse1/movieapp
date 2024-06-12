@@ -1,0 +1,17 @@
+{
+    "movies": [
+        {"id": 1, "title" : "Film 1", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quam dolorum porro cum pariatur, esse dolor cupiditate quae explicabo voluptate voluptatibus, reiciendis quod hic voluptatum. Iure ab deleniti quae iste.", "imageUrl": "1.jpeg", "categoryId": 1},
+        {"id": 2, "title" : "Film 2", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quam dolorum porro cum pariatur, esse dolor cupiditate quae explicabo voluptate voluptatibus, reiciendis quod hic voluptatum. Iure ab deleniti quae iste.", "imageUrl": "2.jpeg", "categoryId": 2},
+        {"id": 3, "title" : "Film 3", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quam dolorum porro cum pariatur, esse dolor cupiditate quae explicabo voluptate voluptatibus, reiciendis quod hic voluptatum. Iure ab deleniti quae iste.", "imageUrl": "3.jpeg", "categoryId": 3},
+        {"id": 4, "title" : "Film 4", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quam dolorum porro cum pariatur, esse dolor cupiditate quae explicabo voluptate voluptatibus, reiciendis quod hic voluptatum. Iure ab deleniti quae iste.", "imageUrl": "4.jpeg", "categoryId": 3},
+        {"id": 5, "title" : "Film 5", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quam dolorum porro cum pariatur, esse dolor cupiditate quae explicabo voluptate voluptatibus, reiciendis quod hic voluptatum. Iure ab deleniti quae iste.", "imageUrl": "5.jpeg", "categoryId": 4},
+        {"id": 6, "title" : "Film 6", "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quam dolorum porro cum pariatur, esse dolor cupiditate quae explicabo voluptate voluptatibus, reiciendis quod hic voluptatum. Iure ab deleniti quae iste.", "imageUrl": "1.jpeg", "categoryId": 4}
+    ],
+    "categories": [
+        {"id": 1, "name": "Macera"},
+        {"id": 2, "name": "Romantik"},
+        {"id": 3, "name": "Komedi"},
+        {"id": 4, "name": "Dram"},
+        {"id": 5, "name": "Aksiyon"}
+    ]
+}
