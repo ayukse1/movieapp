@@ -83,16 +83,6 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .nav-button.prev {
-        left: 5px;
-    }
-
-    .nav-button.next {
-        right: 5px;
-    }
-}
 
 /* Hide vertical scrollbar for all browsers except Firefox */
 .gallery-container::-webkit-scrollbar {
@@ -106,4 +96,28 @@
 
 .btn-sm{
     font-size: 13px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav-button.prev {
+        left: 5px;
+    }
+
+    .nav-button.next {
+        right: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movie-card {
+        width: 100px; /* Smaller width for movie cards */
+    }
+
+    .movie-card img {
+        height: 150px; /* Smaller height for movie cards */
+    }
+    .btn{
+        margin-top: 0.5rem;
+    }
 }

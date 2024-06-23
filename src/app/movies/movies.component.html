@@ -5,7 +5,7 @@
 
 <div *ngIf="!loading">
     <div *ngIf="movies.length > 0; else no_movies">
-        <div class="mb-3 row justify-content-center text-center">
+        <div class="mb-3 row justify-content-center text-center mx-5">
             <input type="text"
                 class="form-control search" 
                 [(ngModel)]="filterText"
@@ -35,9 +35,9 @@
                 <div class="movie-info mx-0 d-flex flex-column justify-content-end">
                     <a routerLink="/movies/{{ item.id }}" class="text-light">
                         <h3>{{item.title | titlecase}}</h3>
-                        <p>{{item.description | summary: 10}}</p>
+                        <p class="d-none d-md-flex">{{item.description | summary: 10}}</p>
                     </a>
-                    <div>
+                    <div class="text-center">
                         <a routerLink="/movies/{{ item.id }}" class="btn btn-sm btn-primary">Details</a>
                         <button *ngIf="!getButtonstate(item)"
                             (click)="addToList($event, item)" 
@@ -45,7 +45,7 @@
                         </button>
                         <button *ngIf="getButtonstate(item)"
                             (click)="addToList($event, item)" 
-                            class="btn btn-sm btn-grey ms-1">Remove from list
+                            class="btn btn-sm btn-grey ms-1">Remove
                         </button>
                     </div>
                 </div>
@@ -68,9 +68,9 @@
                     <div class="movie-info mx-0 d-flex flex-column justify-content-end">
                         <a routerLink="/movies/{{ item.id }}" class="text-light">
                             <h3>{{item.title | titlecase}}</h3>
-                            <p>{{item.description | summary: 10}}</p>
+                            <p class="d-none d-md-flex">{{item.description | summary: 10}}</p>
                         </a>
-                        <div>
+                        <div class="text-center">
                             <a routerLink="/movies/{{ item.id }}" class="btn btn-sm btn-primary">Details</a>
                             <button *ngIf="!getButtonstate(item)"
                                 (click)="addToList($event, item)" 
@@ -78,7 +78,7 @@
                             </button>
                             <button *ngIf="getButtonstate(item)"
                                 (click)="addToList($event, item)" 
-                                class="btn btn-sm btn-grey ms-1">Remove from list
+                                class="btn btn-sm btn-grey ms-1">Remove
                             </button>
                         </div>
                     </div>
@@ -103,9 +103,9 @@
                     <div class="movie-info mx-0 d-flex flex-column justify-content-end">
                         <a routerLink="/movies/{{ item.id }}" class="text-light">
                             <h3>{{item.title | titlecase}}</h3>
-                            <p>{{item.description | summary: 10}}</p>
+                            <p class="d-none d-md-flex">{{item.description | summary: 10}}</p>
                         </a>
-                        <div>
+                        <div class="text-center">
                             <a routerLink="/movies/{{ item.id }}" class="btn btn-sm btn-primary">Details</a>
                             <button *ngIf="!getButtonstate(item)"
                                 (click)="addToList($event, item)" 
@@ -113,7 +113,7 @@
                             </button>
                             <button *ngIf="getButtonstate(item)"
                                 (click)="addToList($event, item)" 
-                                class="btn btn-sm btn-grey ms-1">Remove from list
+                                class="btn btn-sm btn-grey ms-1">Remove
                             </button>
                         </div>
                     </div>

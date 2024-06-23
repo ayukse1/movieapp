@@ -42,6 +42,13 @@ a{
 }
 
 
-
+@media screen and (max-width: 768px) {
+  h3{
+    font-size: 14px !important;
+  }
+  .btn{
+    font-size: 10px !important;
+  }
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";
