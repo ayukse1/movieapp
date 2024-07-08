@@ -1,3 +1,15 @@
 .btn-link{
-    text-decoration: underline !important;
+    text-decoration: underline;
+    color: #dcdbdb;
+}
+.copyright{
+    font-size: 12px;
+    text-decoration: none;
+    color: #dcdbdb;
+}
+
+@media screen and (max-width: 768px) {
+    .btn{
+      font-size: 10px;
+    }
 }

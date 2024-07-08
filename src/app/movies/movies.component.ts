@@ -28,7 +28,7 @@ export class MoviesComponent implements OnInit {
   constructor(
     private alertify: AlertifyService,
     private movieService: MovieService,
-    private categoryService: CategoryService, // Inject CategoryService
+    private categoryService: CategoryService,
     private activatedRoute: ActivatedRoute,
     private authService: AuthService
   ) {}
@@ -143,4 +143,5 @@ export class MoviesComponent implements OnInit {
   getMoviesByCategory(categoryId: string): Movie[] {
     return this.movies.filter(movie => movie.categoryId === categoryId);
   }
+
 }

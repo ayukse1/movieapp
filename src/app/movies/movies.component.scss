@@ -1,5 +1,8 @@
+a{
+    text-decoration: none;
+}
 .search::placeholder {
-    color: #fff;
+    color: #c7c7c7;
 }
 .search {
     max-width: 40rem;
@@ -40,9 +43,9 @@
 .movie-info {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 95%;
     background: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: #c7c7c7;
     opacity: 0;
     transition: opacity 0.3s;
     padding: 10px;
@@ -61,7 +64,7 @@
     width: 40px;
     height: 40px;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: #c7c7c7;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -119,5 +122,6 @@
     }
     .btn{
         margin-top: 0.5rem;
+        font-size: 9px;
     }
 }

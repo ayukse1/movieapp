@@ -8,12 +8,13 @@ import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core.module';
 import { CategoriesModule } from './category/categories.module';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [                  //components
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [                       //modules
     BrowserModule,
@@ -21,7 +22,8 @@ import { CategoriesModule } from './category/categories.module';
     AppRoutingModule,
     SharedModule,
     CoreModule,
-    CategoriesModule
+    CategoriesModule,
+    AboutModule
   ],
   providers: [                     //services
   ],                   

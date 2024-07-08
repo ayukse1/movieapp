@@ -33,4 +33,10 @@ export class CategoryService {
     createCategory(category: Category): Observable<Category> {
         return this.http.post<Category>(this.url_firebase + 'categories.json', category);
     }
+
+    getCategoryById(id: string): Observable<Category> {
+        return this.http.get<Category>(`${this.url_firebase}categories/${id}.json`).pipe(
+          map(response => ({ ...response, id }))
+        );
+    }
 }

@@ -1,17 +1,68 @@
 <div *ngIf="!loading">
     <div *ngIf="movie else no_movie">
-        <div class="card">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="../../assets/img/{{movie.imageUrl}}" class="img-fluid rounded-start" alt="">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h1 class="card-title">{{ movie.title }}</h1>
-                        <p class="card-text">{{ movie.description }}</p>
+        <div>
+            <div class="movie-card-bg" [style.background-image]="'url(../../assets/img/' + movie.imageUrl + ')'">
+                <div class="row movie-card mx-0">
+                    <div class="col-md-6 movie-card-left">
+                        <div>
+                            <h1 class="movie-title mt-4">{{ movie.title }}</h1>
+                            <div class="d-flex gap-2">
+                                <a class="py-2">{{movie.year}} | {{ movie.agelimit }}+ | Imdb: {{ movie.imdb }} <i class="fa-solid fa-star" style="color: rgb(245,197,24);"></i></a>
+                            </div>
+
+                            <div class="my-5">
+                                <button type="button" class="btn btn-primary px-4 me-3" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                    Watch <i class="fa-solid fa-circle-play"></i>
+                                </button>
+                                <button *ngIf="!getButtonstate(movie)" (click)="addToList($event, movie)" class="btn btn-outline-grey ms-1 px-4"><i class="fa-solid fa-plus fa-xs"></i> Add to list</button>
+                                <button *ngIf="getButtonstate(movie)" (click)="addToList($event, movie)" class="btn btn-outline-grey ms-1 px-4"><i class="fa-solid fa-minus fa-xs"></i> Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="/" class="btn btn-sm btn-outline-dark mt-2 px-2 float-end"><i class="fa-solid fa-arrow-left"></i></a>
+                    </div>
+                    <div class="movie-card-bottom p-5">
+                        <div class="movie-card-bottom-items">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6>Category</h6>
+                                    <p>{{ categoryName ? categoryName.charAt(0).toUpperCase() + categoryName.slice(1) : '' }}</p>
+                                </div>
+                                <div class="col-6">
+                                    <h6>Description</h6>
+                                    <p>{{ movie.description }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h6>Stars</h6>
+                                    <p>{{ movie.moviestars }}</p>
+                                </div>
+                                <div class="col-6">
+                                    <h6>Creators</h6>
+                                    <p>{{ movie.creators }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <video controls class="video-fluid movie-video w-100">
+                                <source [src]="'../../../assets/video/' + movie.videoUrl" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -25,6 +76,3 @@
 <div *ngIf="loading" class="spinner-border text-primary" role="status">
     <span class="visually-hidden">Loading...</span>
 </div>
-
-
-

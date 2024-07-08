@@ -32,9 +32,15 @@ export class MovieCreateComponent implements OnInit{
 
   movieForm = new FormGroup({
     title: new FormControl("", [Validators.required, Validators.minLength(5)]),
+    agelimit: new FormControl("", Validators.required),
+    imdb: new FormControl("", Validators.required),
     description: new FormControl("", Validators.required),
+    moviestars: new FormControl("", Validators.required),
+    creators: new FormControl("", Validators.required),
     imageUrl: new FormControl("", Validators.required),
-    categoryId: new FormControl("", Validators.required)
+    videoUrl: new FormControl("", Validators.required),
+    categoryId: new FormControl("", Validators.required),
+    year: new FormControl("", Validators.required),
   })
 
   get title() {
@@ -44,9 +50,15 @@ export class MovieCreateComponent implements OnInit{
   clearForm(){
     this.movieForm.patchValue({
       title: '',
+      agelimit: '',
+      imdb: '',
       description: '',
+      moviestars: '',
+      creators: '',
       imageUrl: '',
-      categoryId: ''
+      videoUrl: '',
+      categoryId: '',
+      year: ''
     });
   }
 
@@ -54,12 +66,18 @@ export class MovieCreateComponent implements OnInit{
 
     const movie = { 
       id: 0,
-      title: this.movieForm.value.title, 
-      description: this.movieForm.value.description, 
-      imageUrl: this.movieForm.value.imageUrl, 
+      title: this.movieForm.value.title,
+      agelimit: Number(this.movieForm.value.agelimit),
+      imdb: Number(this.movieForm.value.imdb),
+      description: this.movieForm.value.description,
+      moviestars: this.movieForm.value.moviestars,
+      creators: this.movieForm.value.creators,
+      imageUrl: this.movieForm.value.imageUrl,
+      videoUrl: this.movieForm.value.videoUrl,
       isPopular: false, 
       datePublished: new Date().getTime(), 
-      categoryId: this.movieForm.value.categoryId
+      categoryId: this.movieForm.value.categoryId,
+      year: Number(this.movieForm.value.year)
   };
 
   this.movieService.createMovie(movie).subscribe(data => {

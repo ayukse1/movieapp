@@ -24,7 +24,7 @@
 </ng-template>
 
 <ng-template #movieList1>
-    <h2>Recommendations for you</h2>
+    <h3>Recommendations for you</h3>
     <div class="gallery-container gallery-container-movieList1 mb-3 d-flex flex-row flex-nowrap overflow-auto ps-0">
         <button class="nav-button prev" (click)="scroll(-1, '.gallery-container-movieList1')">&#10094;</button>
         <div class="d-flex">
@@ -32,20 +32,20 @@
                 <a routerLink="/movies/{{ item.id }}" class="flex-grow-1">
                     <img src="../../assets/img/{{item.imageUrl}}" class="img-fluid rounded-start" alt="">
                 </a>
-                <div class="movie-info mx-0 d-flex flex-column justify-content-end">
+                <div class="movie-info mx-0 d-flex flex-column text-center text-md-start">
                     <a routerLink="/movies/{{ item.id }}" class="text-light">
-                        <h3>{{item.title | titlecase}}</h3>
-                        <p class="d-none d-md-flex">{{item.description | summary: 10}}</p>
+                        <h5>{{item.title | titlecase | summary: 15}}</h5>
+                        <p class="d-none d-md-flex">{{item.description | summary: 25}}</p>
                     </a>
-                    <div class="text-center">
+                    <div class="d-flex flex-column flex-md-row justify-content-md-center">
                         <a routerLink="/movies/{{ item.id }}" class="btn btn-sm btn-primary">Details</a>
                         <button *ngIf="!getButtonstate(item)"
                             (click)="addToList($event, item)" 
-                            class="btn btn-sm btn-grey ms-1">Add to list
+                            class="btn btn-sm btn-outline-grey ms-1"><i class="fa-solid fa-plus fa-xs"></i> Add to list
                         </button>
                         <button *ngIf="getButtonstate(item)"
                             (click)="addToList($event, item)" 
-                            class="btn btn-sm btn-grey ms-1">Remove
+                            class="btn btn-sm btn-outline-grey ms-1"><i class="fa-solid fa-minus fa-xs"></i> Remove
                         </button>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
 </ng-template>
 
 <ng-template #movieListLiked>
-    <h2>You liked</h2>
+    <h3>You liked</h3>
     <div class="gallery-container gallery-container-movieListLiked mb-3 d-flex flex-row flex-nowrap overflow-auto ps-0">
         <button class="nav-button prev" (click)="scroll(-1, '.gallery-container-movieListLiked')">&#10094;</button>
         <div class="d-flex">
@@ -65,20 +65,20 @@
                     <a routerLink="/movies/{{ item.id }}" class="flex-grow-1">
                         <img src="../../assets/img/{{item.imageUrl}}" class="img-fluid rounded-start" alt="">
                     </a>
-                    <div class="movie-info mx-0 d-flex flex-column justify-content-end">
+                    <div class="movie-info mx-0 d-flex flex-column text-center text-md-start">
                         <a routerLink="/movies/{{ item.id }}" class="text-light">
-                            <h3>{{item.title | titlecase}}</h3>
-                            <p class="d-none d-md-flex">{{item.description | summary: 10}}</p>
+                            <h5>{{item.title | titlecase | summary: 15}}</h5>
+                            <p class="d-none d-md-flex">{{item.description | summary: 25}}</p>
                         </a>
                         <div class="text-center">
                             <a routerLink="/movies/{{ item.id }}" class="btn btn-sm btn-primary">Details</a>
                             <button *ngIf="!getButtonstate(item)"
                                 (click)="addToList($event, item)" 
-                                class="btn btn-sm btn-grey ms-1">Add to list
+                                class="btn btn-sm btn-outline-grey ms-1"><i class="fa-solid fa-plus fa-xs"></i> Add to list
                             </button>
                             <button *ngIf="getButtonstate(item)"
                                 (click)="addToList($event, item)" 
-                                class="btn btn-sm btn-grey ms-1">Remove
+                                class="btn btn-sm btn-outline-grey ms-1"><i class="fa-solid fa-minus fa-xs"></i> Remove
                             </button>
                         </div>
                     </div>
@@ -100,20 +100,20 @@
                     <a routerLink="/movies/{{ item.id }}" class="flex-grow-1">
                         <img src="../../assets/img/{{item.imageUrl}}" class="img-fluid rounded-start" alt="">
                     </a>
-                    <div class="movie-info mx-0 d-flex flex-column justify-content-end">
+                    <div class="movie-info mx-0 d-flex flex-column text-center text-md-start">
                         <a routerLink="/movies/{{ item.id }}" class="text-light">
-                            <h3>{{item.title | titlecase}}</h3>
-                            <p class="d-none d-md-flex">{{item.description | summary: 10}}</p>
+                            <h5>{{item.title | titlecase | summary: 15}}</h5>
+                            <p class="d-none d-md-flex">{{item.description | summary: 25}}</p>
                         </a>
                         <div class="text-center">
                             <a routerLink="/movies/{{ item.id }}" class="btn btn-sm btn-primary">Details</a>
                             <button *ngIf="!getButtonstate(item)"
                                 (click)="addToList($event, item)" 
-                                class="btn btn-sm btn-grey ms-1">Add to list
+                                class="btn btn-sm btn-outline-grey ms-1"><i class="fa-solid fa-plus fa-xs"></i> Add to list
                             </button>
                             <button *ngIf="getButtonstate(item)"
                                 (click)="addToList($event, item)" 
-                                class="btn btn-sm btn-grey ms-1">Remove
+                                class="btn btn-sm btn-outline-grey ms-1"><i class="fa-solid fa-minus fa-xs"></i> Remove
                             </button>
                         </div>
                     </div>
