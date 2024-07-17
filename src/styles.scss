@@ -2,8 +2,9 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "assets/forms.scss";
 
+
 $theme-colors: (
-  "primary": #eb3321,
+  "primary": #f1c40f,
   "danger": #E64833,
   "grey": #2a3136,
   "grey-light": #dcdbdb,
@@ -11,7 +12,7 @@ $theme-colors: (
   "dark": #191d20
 );
 
-$primary: #eb3321;
+$primary: #f1c40f;
 $dark: #191d20;
 $grey: #2a3136;
 $light: #e1e1e1;
@@ -21,8 +22,14 @@ $grey-light: #b2b2b2;
 $body-bg: $dark;
 $body-color: $light;
 $bg-primary: $primary;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+body {
+  font-family: 'Rubik', sans-serif;
+}
 html {
   scroll-behavior: smooth;
+  font-size: 14px;
 }
 a{
   text-decoration: none;
@@ -31,46 +38,77 @@ a{
 h1,h2,h3,h4,h5,h6{
   color: $light;
 }
-p{
-  font-size: 0.8rem;
-  color: $grey-light;
+h3{
+  font-size: 1.5rem;
 }
-.btn-danger{
-    background-color: $danger;
-    border-color: $danger;
-    color: $light
+h4{
+  font-size: 1.3rem;
+}
+h5{
+  font-size: 1rem;
+}
+p{
+  font-size: 0.9rem;
+  color: $grey-light;
+  margin-bottom: 2rem;
+}
+
+.search {
+  max-width: 40rem;
+  font-size: 0.8rem;
+  background: linear-gradient(135deg, #1a1a1a, #141414);
+}
+.search::placeholder {
+  color: #c7c7c7;
+}
+.text-primary{
+  color: #f1c40f!important;
+}
+
+/* Default styles for buttons */
+.btn{
+  color: $light;
 }
 .btn-primary{
   background-color: $primary;
   border-color: $primary;
-  color: $light
+  color: $dark
 }
-.btn{
-  color: $light!important;
+.btn-primary:hover{
+  background-color: #d4ac0d;
+  border-color: #d4ac0d;
+  color: #fff;
 }
 
+/* Background */
 .bg{
-  background: url('./assets/img/bgcolor.png');
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #242424, #141414);
   background-size: cover;
+  background-attachment: fixed;
 }
 
+/* Responsive styles for max-width 768px */
 @media screen and (max-width: 768px) {
   h3{
-    font-size: 14px;
+    font-size: 1.2rem;
+  }
+  h4{
+    font-size: 1rem;
   }
   h5{
-    font-size: 12px;
+    font-size: 0.8rem;
   }
   .btn{
-    font-size: 8px;
+    font-size: 0.6rem;
   }
   p{
-    font-size: 10px;
+    font-size: 0.7rem;
   }
   label{
-    font-size: 12px;
+    font-size: 0.9rem;
+  }
+  .search {
+    max-width: 30rem;
+    font-size: 0.5rem;
   }
 }
-
-@import "../node_modules/bootstrap/scss/bootstrap";

@@ -3,13 +3,17 @@
     color: #dcdbdb;
 }
 .copyright{
-    font-size: 12px;
+    font-size: 10px;
     text-decoration: none;
     color: #dcdbdb;
 }
 
+/* Responsive styles for max-width 768px */
 @media screen and (max-width: 768px) {
     .btn{
       font-size: 10px;
+    }
+    .copyright{
+        font-size: 8px;
     }
 }

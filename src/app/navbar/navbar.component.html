@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-dark">
-    <div class="container position-relative">
+<nav class="navbar navbar-expand-sm navbar-dark">
+    <div class="container-md position-relative">
         <a href="/" class="navbar-brand text-primary fw-bolder">Movie App</a>
         <ul class="navbar-nav me-auto">
             <li *ngIf="isAuthenticated" class="nav-item d-none d-md-flex mx-1" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
@@ -22,7 +22,7 @@
                 <button routerLink="/auth" class="nav-link">Login</button>
             </li>
             <li *ngIf="isAuthenticated" class="nav-item">
-                <button (click)="onLogout()" class="nav-link">Logout</button>
+                <button (click)="onLogout()" class="nav-link logout">Logout</button>
             </li>
         </ul>
 

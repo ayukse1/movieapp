@@ -2,7 +2,6 @@
     position: relative;
     height: calc(100vh - 40px);
 }
-
 .auth::before {
     content: '';
     position: absolute;
@@ -15,7 +14,6 @@
     z-index: 1;
 }
 
-
 .auth-form{
     position: relative;
     z-index: 2;
@@ -23,3 +21,27 @@
 .authform{
     min-width: 20rem;
 }
+
+@media screen and (max-width: 768px) {
+    h3{
+      font-size: 14px;
+    }
+    h5{
+      font-size: 12px;
+    }
+    .btn{
+      font-size: 10px;
+    }
+    p{
+      font-size: 10px;
+    }
+    label{
+      font-size: 12px;
+    }
+    html{
+        font-size: 10px;
+    }
+    input{
+        font-size: 10px;
+    }
+  }

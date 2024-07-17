@@ -1,36 +1,7 @@
-.hero {
-  padding: 3rem 0;
-}
-
-.hero h1 {
-  margin-bottom: 1rem;
-}
-
-.now-showing {
-  padding: 3rem 0;
-}
-
-.now-showing .movie {
-  margin-bottom: 2rem;
-}
-
 .now-showing .movie img {
   width: 100%;
   max-width: 75%;
   border-radius: 1rem;
-  margin-bottom: 1rem;
-}
-
-.mission {
-  padding: 3rem 0;
-}
-
-.mission h2 {
-  margin-bottom: 1.5rem;
-}
-
-.genres {
-  padding: 3rem 0;
 }
 
 .genre img {
@@ -38,33 +9,12 @@
   max-width: 75%;
   max-height: 100%;
   border-radius: 1rem;
-  margin-bottom: 1rem;
-}
-
-.community {
-  padding: 3rem 0;
-}
-
-.community h2 {
-  margin-bottom: 1.5rem;
-}
-
-.community .community-event {
-  margin-bottom: 2rem;
 }
 
 .community .community-event img {
   max-height: 10rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
-}
-
-.contact {
-  padding: 3rem 0;
-}
-
-.contact h2 {
-  margin-bottom: 1.5rem;
 }
 
 .contact form {
@@ -84,12 +34,13 @@
 .text{
   width: 75%;
 }
+.bg-purple{
+  background-color: hsl(0, 0%, 0%, 0.4);
+  border-radius: 1rem;
+}
 
 @media screen and (max-width: 768px) {
-  .btn{
-    font-size: 8px;
-  }
-  label{
-    font-size: 12px;
+  .community .community-event img {
+    margin-bottom: 0.5rem;
   }
 }

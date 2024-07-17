@@ -144,4 +144,7 @@ export class MoviesComponent implements OnInit {
     return this.movies.filter(movie => movie.categoryId === categoryId);
   }
 
+  shouldShowMovieListLiked(): boolean {
+    return this.filteredMovies.some(movie => this.isInList(movie.id));
+  }
 }

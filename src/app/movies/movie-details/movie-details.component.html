@@ -5,17 +5,17 @@
                 <div class="row movie-card mx-0">
                     <div class="col-md-6 movie-card-left">
                         <div>
-                            <h1 class="movie-title mt-4">{{ movie.title }}</h1>
+                            <h2 class="mt-4">{{ movie.title }}</h2>
                             <div class="d-flex gap-2">
-                                <a class="py-2">{{movie.year}} | {{ movie.agelimit }}+ | Imdb: {{ movie.imdb }} <i class="fa-solid fa-star" style="color: rgb(245,197,24);"></i></a>
+                                <h5 class="py-2">{{movie.year}} | {{ movie.agelimit }}+ | Imdb: {{ movie.imdb }} <i class="fa-solid fa-star" style="color: rgb(245,197,24);"></i></h5>
                             </div>
 
                             <div class="my-5">
                                 <button type="button" class="btn btn-primary px-4 me-3" data-bs-toggle="modal" data-bs-target="#videoModal">
                                     Watch <i class="fa-solid fa-circle-play"></i>
                                 </button>
-                                <button *ngIf="!getButtonstate(movie)" (click)="addToList($event, movie)" class="btn btn-outline-grey ms-1 px-4"><i class="fa-solid fa-plus fa-xs"></i> Add to list</button>
-                                <button *ngIf="getButtonstate(movie)" (click)="addToList($event, movie)" class="btn btn-outline-grey ms-1 px-4"><i class="fa-solid fa-minus fa-xs"></i> Remove</button>
+                                <button *ngIf="!getButtonstate(movie)" (click)="addToList($event, movie)" class="btn btn-outline-primary ms-1 px-4"><i class="fa-solid fa-plus fa-xs"></i> Add to list</button>
+                                <button *ngIf="getButtonstate(movie)" (click)="addToList($event, movie)" class="btn btn-outline-primary ms-1 px-4"><i class="fa-solid fa-minus fa-xs"></i> Remove</button>
                             </div>
                         </div>
                     </div>
